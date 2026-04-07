@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'motion/react';
 import { Droplets, ShieldCheck, Clock, Users, ChevronRight } from 'lucide-react';
 import EstimateForm from '../components/EstimateForm';
+import OverlappingImages from '../components/OverlappingImages';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -45,7 +46,12 @@ export default function Home() {
               {t('hero_subtitle')}
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href="#estimate" className="btn-primary">
+              <a 
+                href="https://intensiva.com.br/projetos/waterland/contact/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 {t('cta_estimate')}
               </a>
               <a href="/services" className="btn-secondary border-white text-white hover:bg-white hover:text-brand-dark">
@@ -66,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
@@ -76,18 +82,18 @@ export default function Home() {
               <p className="text-lg text-slate-600 leading-relaxed">
                 {t('home_intro_text')}
               </p>
-              <a href="/" className="inline-flex items-center text-brand-light font-bold hover:underline">
+              <a href="/about" className="inline-flex items-center text-brand-light font-bold hover:underline">
                 {t('home_learn_more')} <ChevronRight size={20} />
               </a>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1562133567-b6a0a9c7e6eb?auto=format&fit=crop&q=80&w=1000" 
-                className="rounded-3xl shadow-2xl"
-                alt="Family enjoying pool"
-                referrerPolicy="no-referrer"
+              <OverlappingImages 
+                image1="https://images.unsplash.com/photo-1562133567-b6a0a9c7e6eb?auto=format&fit=crop&q=80&w=1000"
+                image2="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&q=80&w=800"
+                alt1="Family enjoying pool"
+                alt2="Pool maintenance"
               />
-              <div className="absolute -bottom-6 -left-6 bg-brand-light text-white p-8 rounded-2xl shadow-xl hidden md:block">
+              <div className="absolute -bottom-6 -left-6 bg-brand-light text-white p-8 rounded-2xl shadow-xl hidden xl:block z-20">
                 <p className="text-3xl font-bold">{t('home_trusted_count')}</p>
                 <p className="text-sm font-medium opacity-90">{t('home_trusted_label')}</p>
               </div>

@@ -50,12 +50,14 @@ export default function CTA() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <Link 
-            to="/contact" 
+          <a 
+            href="https://intensiva.com.br/projetos/waterland/contact/" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-brand-light hover:bg-brand-light/90 text-white font-bold py-5 px-12 rounded-full transition-all transform hover:scale-105 shadow-xl text-lg"
           >
             {t('cta_schedule')}
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

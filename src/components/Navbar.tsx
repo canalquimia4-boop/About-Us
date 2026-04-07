@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: t('nav_about'), path: '/' },
+    { name: t('nav_about'), path: 'https://intensiva.com.br/projetos/waterland/about-us/' },
     { name: t('nav_home'), path: '/home' },
     { name: t('nav_services'), path: '/services' },
     { name: t('nav_portfolio'), path: '/portfolio' },
@@ -65,7 +65,12 @@ export default function Navbar() {
               <span className="text-xs font-bold uppercase">{language}</span>
             </button>
 
-            <a href="/contact" className="btn-primary py-2 text-sm">
+            <a 
+              href="https://intensiva.com.br/projetos/waterland/contact/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary py-2 text-sm"
+            >
               {t('cta_estimate')}
             </a>
           </div>

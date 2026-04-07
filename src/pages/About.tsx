@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'motion/react';
 import { Target, Eye, Heart } from 'lucide-react';
+import OverlappingImages from '../components/OverlappingImages';
 
 export default function About() {
   const { t } = useLanguage();
@@ -57,9 +58,13 @@ export default function About() {
                 {t('about_story_p3')}
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&q=80&w=600" className="rounded-2xl shadow-lg mt-8" alt="Pool work" referrerPolicy="no-referrer" />
-              <img src="https://drive.google.com/thumbnail?id=1_OE0sqKKohsbht0yTj-EtM556Ta0JwZY&sz=w1000" className="rounded-2xl shadow-lg" alt="Pool renovation" referrerPolicy="no-referrer" />
+            <div className="relative">
+              <OverlappingImages 
+                image1="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&q=80&w=800"
+                image2="https://drive.google.com/thumbnail?id=1_OE0sqKKohsbht0yTj-EtM556Ta0JwZY&sz=w1000"
+                alt1="Pool maintenance work"
+                alt2="Pool renovation result"
+              />
             </div>
           </div>
         </div>

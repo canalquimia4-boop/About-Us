@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'motion/react';
 import { serviceData } from '../data/services';
+import OverlappingImages from '../components/OverlappingImages';
 
 export default function Portfolio() {
   const { t } = useLanguage();
@@ -31,6 +32,40 @@ export default function Portfolio() {
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             {t('portfolio_hero_subtitle')}
           </p>
+        </div>
+      </section>
+
+      {/* Featured Section */}
+      <section className="py-24 bg-slate-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <OverlappingImages 
+              image1="https://drive.google.com/thumbnail?id=1_OE0sqKKohsbht0yTj-EtM556Ta0JwZY&sz=w1000"
+              image2="https://drive.google.com/thumbnail?id=1VpSTkFPid_G1dlynAoAPf7n0SFV19Tmj&sz=w1000"
+              alt1="Premium Pool Renovation"
+              alt2="Modern Pool Deck"
+            />
+            <div className="space-y-6">
+              <span className="text-brand-light font-bold uppercase tracking-widest">Featured Transformation</span>
+              <h2 className="text-4xl font-bold text-brand-dark leading-tight">
+                Transforming Outdoor Spaces into Private Paradises
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Our team specializes in high-end pool renovations that combine modern aesthetics with durable engineering. Every project is a testament to our commitment to quality and attention to detail.
+              </p>
+              <div className="flex items-center space-x-8 pt-4">
+                <div>
+                  <p className="text-3xl font-bold text-brand-dark">20+</p>
+                  <p className="text-sm text-slate-500">Years Exp.</p>
+                </div>
+                <div className="w-px h-12 bg-slate-200"></div>
+                <div>
+                  <p className="text-3xl font-bold text-brand-dark">400+</p>
+                  <p className="text-sm text-slate-500">Happy Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
