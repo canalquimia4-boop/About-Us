@@ -71,11 +71,11 @@ export default function About() {
       </section>
 
       {/* Mission Vision Values */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-white p-10 rounded-3xl shadow-xl space-y-4">
-              <div className="w-12 h-12 bg-brand-light/10 text-brand-light rounded-xl flex items-center justify-center">
+            <div className="bg-[#e9fbff] p-10 rounded-3xl shadow-xl space-y-4">
+              <div className="w-12 h-12 bg-brand-dark/10 text-brand-dark rounded-xl flex items-center justify-center">
                 <Target size={24} />
               </div>
               <h3 className="text-2xl font-bold text-brand-dark">{t('about_mission_title')}</h3>
@@ -83,8 +83,8 @@ export default function About() {
                 {t('about_mission_text')}
               </p>
             </div>
-            <div className="bg-white p-10 rounded-3xl shadow-xl space-y-4">
-              <div className="w-12 h-12 bg-brand-light/10 text-brand-light rounded-xl flex items-center justify-center">
+            <div className="bg-[#e9fbff] p-10 rounded-3xl shadow-xl space-y-4">
+              <div className="w-12 h-12 bg-brand-dark/10 text-brand-dark rounded-xl flex items-center justify-center">
                 <Eye size={24} />
               </div>
               <h3 className="text-2xl font-bold text-brand-dark">{t('about_vision_title')}</h3>
@@ -92,8 +92,8 @@ export default function About() {
                 {t('about_vision_text')}
               </p>
             </div>
-            <div className="bg-white p-10 rounded-3xl shadow-xl space-y-4">
-              <div className="w-12 h-12 bg-brand-light/10 text-brand-light rounded-xl flex items-center justify-center">
+            <div className="bg-[#e9fbff] p-10 rounded-3xl shadow-xl space-y-4">
+              <div className="w-12 h-12 bg-brand-dark/10 text-brand-dark rounded-xl flex items-center justify-center">
                 <Heart size={24} />
               </div>
               <h3 className="text-2xl font-bold text-brand-dark">{t('about_values_title')}</h3>
